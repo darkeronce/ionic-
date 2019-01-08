@@ -1,0 +1,25 @@
+<ion-header>
+<ion-searchbar
+  [(ngModel)]="termino"
+  [showCancelButton]="true"
+  (ionInput)="userFilter($event)">
+  
+</ion-searchbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let item of userList" (click)="userDetail(item)">
+      <div>
+      </div>
+      <div>
+        <div>{{item['nombre']}}</div>
+      </div>
+      <div >
+        <div>{{item['apellido']}}</div>
+        <div>{{item['rut']}}</div>
+      </div>
+      <div>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </div>
+  </div>
+</ion-content>
